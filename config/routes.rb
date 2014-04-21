@@ -1,5 +1,5 @@
 Shortenit::Application.routes.draw do
-  root "urls#new"
+  root 'urls#new'
 
   resources :urls, only: [:new, :create, :show]
 
