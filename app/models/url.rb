@@ -11,7 +11,7 @@ class Url < ActiveRecord::Base
   private
 
   def check_if_url_is_valid
-    unless self.original_url.strip.downcase.start_with?('http')
+    unless original_url.strip.downcase.start_with?('http')
       errors.add(:url, 'must start with http or https.')
     end
   end
