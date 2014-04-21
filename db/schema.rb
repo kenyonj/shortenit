@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(version: 20140401195022) do
   enable_extension "plpgsql"
 
   create_table "urls", force: true do |t|
-    t.string   "name"
-    t.string   "orginal_url"
-    t.string   "shortened_url"
+    t.string   "name",         null: false
+    t.string   "original_url", null: false
+    t.string   "token",        null: false
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

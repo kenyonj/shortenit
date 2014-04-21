@@ -1,5 +1,7 @@
 Shortenit::Application.routes.draw do
+  root "urls#new"
 
-  root "homes#index"
+  resources :urls, only: [:new, :create, :show]
 
+  resources :redirects, only: [:show], path: ''
 end
