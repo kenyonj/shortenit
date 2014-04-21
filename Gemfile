@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+
 gem 'rails', '4.0.4'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.2'
@@ -8,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'clearance'
+
 group :doc do
   gem 'sdoc', require: false
 end
@@ -17,3 +19,6 @@ group :development do
   gem 'binding_of_caller'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
