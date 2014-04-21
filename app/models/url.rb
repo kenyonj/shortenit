@@ -24,6 +24,6 @@ class Url < ActiveRecord::Base
   end
 
   def escape_original_url
-    self.original_url = URI.escape(self.original_url.strip)
+    self.original_url = URI.escape(original_url.strip)
   end
 end
