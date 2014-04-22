@@ -2,6 +2,7 @@
 
 <%= form_for @url do |form| %>
   <%= form.text_field :original_url,
+    size: 70,
     placeholder: 'Please enter your long url.' %>
   <%= form.submit 'ShortenIT' %>
 <% end %>
