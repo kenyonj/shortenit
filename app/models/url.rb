@@ -1,6 +1,7 @@
 class Url < ActiveRecord::Base
   before_create :generate_unique_token, :escape_original_url
 
+  validates :original_url, presence: true
   validate :check_if_url_is_valid
 
   def to_param
