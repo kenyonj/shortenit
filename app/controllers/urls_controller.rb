@@ -23,7 +23,6 @@ class UrlsController < ApplicationController
   def url_form_params
     params.require(:url).
       permit(
-        :name,
         :original_url
       )
   end
