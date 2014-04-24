@@ -1,8 +1,20 @@
 <%= render 'errors', target: @url %>
 
-<%= form_for @url do |form| %>
-  <%= form.text_field :original_url,
-    size: 70,
-    placeholder: 'Please enter your long url.' %>
-  <%= form.submit 'ShortenIT' %>
-<% end %>
+<div id='new-form-wrapper'>
+  <div id='new-url-form'>
+    <%= form_for @url do |form| %>
+      <div class='form-item'>
+        <%= form.text_field :original_url,
+          size: 70,
+          placeholder: 'Please enter your long url.' %>
+      </div>
+      <div class='button-panel'>
+        <%= form.submit 'shorten', class: 'button' %>
+      </div>
+    <% end %>
+  </div>
+
+  <div id='deletion-disclaimer'>
+    *Links will be destroyed after 30 days.
+  </div>
+</div>

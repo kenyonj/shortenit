@@ -16,14 +16,8 @@ class UrlsController < ApplicationController
 
   private
 
-  def find_url
-    Url.find_by(token: params[:id])
-  end
-
   def url_form_params
     params.require(:url).
-      permit(
-        :original_url
-      )
+      permit(:original_url)
   end
 end
