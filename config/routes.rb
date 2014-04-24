@@ -4,4 +4,6 @@ Shortenit::Application.routes.draw do
   resources :urls, only: [:new, :create, :show]
 
   resources :redirects, only: [:show], path: ''
+
+  get '/shorten/create' => 'bookmarklets#create'
 end

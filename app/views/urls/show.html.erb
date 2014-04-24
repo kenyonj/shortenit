@@ -1,8 +1,17 @@
-This is the URL page:
-<div>
-  Original: <%= @url.original_url %>
+<div id='show-url-page'>
+  <div id='original-url'>
+    Original: <span class='url'><%= @url.original_url %></span>
+  </div>
+  <div id='short-url'>
+    Shortened:
+    <a class='url' href='<%= redirect_url(@url.token) %>'>
+      <%= redirect_url(@url.token) %>
+    </a>
+    <a href='#' data-clipboard-text='<%= redirect_url(@url.token) %>' id='clip-button'>
+      <%= image_tag('copyicon.png') %>
+    </a>
+  </div>
 </div>
-<div>
-  Shortened: <a href="http://jpk.io/<%= @url.token %>">
-    http://jpk.io/<%= @url.token %></a>
-</div>
+<script>
+  var client = new ZeroClipboard( $('#clip-button') );
+</script>

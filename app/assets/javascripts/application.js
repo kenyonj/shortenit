@@ -11,6 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
+//= require zeroclipboard
+//= require jquery.tipsy
 //= require turbolinks
 //= require_tree .

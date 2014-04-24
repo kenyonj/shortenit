@@ -8,15 +8,33 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require tipsy
  *= require_self
  */
 @import "bourbon";
 @import "neat";
 @import "new_url_page";
+@import "show_url_page";
 
 @import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(https://brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i);
 
 body {
   margin: 5px;
   padding: 0;
 }
+
+#bookmarklet {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: 'Oswald', 'sans-serif';
+  font-weight: 200;
+  color: rgba(black, .6);
+  a {
+    text-decoration: none;
+  }
+  a:link {
+    color: #FC6E51;
+  }
+}
+

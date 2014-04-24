@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ShortenIT</title>
+  <title>jpk.io shortener</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -10,12 +10,18 @@
 <body>
   <div id='wrapper'>
     <div id='site-title'>
-      jpk.io
+      <%= link_to 'jpk.io', root_path %>
     </div>
     <div id='site-subtitle'>
       a simple url shortener.
     </div>
     <%= yield %>
+    <div id='bookmarklet'>
+      Drag this link to your bookmarks bar for a quick way to create short URLs:
+      <a href="javascript:location.href='http://jpk.io/shorten/create?original_url='
+                +encodeURIComponent(location.href)
+                +'&title='+encodeURIComponent(document.title)">shortener</a>
+    </div>
   </div>
 </body>
 </html>

@@ -6,7 +6,7 @@ class UrlsController < ApplicationController
   end
 
   def create
-    @url = Url.create(url_form_params)
+    @url = Url.find_or_create_by(url_form_params)
     respond_with @url
   end
 

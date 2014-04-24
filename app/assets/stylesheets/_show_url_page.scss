@@ -1,0 +1,40 @@
+#show-url-page {
+  font-family: 'Linux Libertine';
+  padding: 15px;
+
+  #original-url {
+    font-size: 1em;
+    font-variant: small-caps;
+    padding-bottom: 15px;
+
+    .url {
+      font-style: italic;
+      font-variant: normal;
+    }
+  }
+
+  #short-url {
+    font-size: 1.2em;
+    font-variant: small-caps;
+    line-height: 30px;
+    margin: auto;
+
+    img {
+      position: relative;
+      top: 3px;
+      margin-left: 5px;
+    }
+
+    .url {
+      font-style: italic;
+      font-weight: 700;
+      font-variant: normal;
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        color: rgba(black, .6);
+      }
+    }
+  }
+}
