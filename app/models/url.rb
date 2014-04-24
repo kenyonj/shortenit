@@ -1,24 +1,13 @@
 class Url < ActiveRecord::Base
-  before_create :generate_unique_token, :escape_original_url
+  before_create :generate_unique_token
 
-  validates :original_url, presence: true
-  validate :check_if_url_is_valid
+  validates :original_url, presence: true, url: true
 
   def to_param
     token
   end
 
   private
-
-  def check_if_url_is_valid
-    unless original_url.strip.downcase.start_with?('http')
-      errors.add(:url, 'must start with http or https.')
-    end
-  end
-
-  def escape_original_url
-    self.original_url = URI.escape(original_url.strip)
-  end
 
   def generate_unique_token
     self.token = SecureRandom.hex(2)

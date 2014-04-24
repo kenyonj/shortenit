@@ -16,8 +16,17 @@ class UrlsController < ApplicationController
 
   private
 
+  def find_url
+    Url.find_by(token: params[:id])
+  end
+
   def url_form_params
-    params.require(:url).
-      permit(:original_url)
+    params.require(:url).merge(
+      original_url: format(params[:url][:original_url])
+    )
+  end
+
+  def format(url)
+    UrlFormatter.new(url).formatted_url
   end
 end
