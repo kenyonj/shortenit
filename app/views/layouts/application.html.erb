@@ -18,9 +18,12 @@
     <%= yield %>
     <div id='bookmarklet'>
       Drag this link to your bookmarks bar for a quick way to create short URLs:
-      <a href="javascript:location.href='http://jpk.io/shorten/create?original_url='
-                +encodeURIComponent(location.href)
-                +'&title='+encodeURIComponent(document.title)">shortener</a>
+      <a href=
+        "javascript:location.href='http://jpk.io/shorten/create?url[original_url]='
+        +encodeURIComponent(location.href)
+        +'&title='+encodeURIComponent(document.title)">
+        shortener
+      </a>
     </div>
   </div>
 </body>

@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'bourbon'
 gem 'neat'
 gem 'zeroclipboard-rails'
+gem 'unicorn-rails'
 
 group :doc do
   gem 'sdoc', require: false
@@ -20,6 +21,7 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'pry'
 end
 
 group :production do

@@ -6,7 +6,7 @@ class UrlsController < ApplicationController
   end
 
   def create
-    @url = Url.find_or_create_by(url_form_params)
+    @url = Url.find_or_create_by(url_params)
     respond_with @url
   end
 
@@ -20,8 +20,8 @@ class UrlsController < ApplicationController
     Url.find_by(token: params[:id])
   end
 
-  def url_form_params
-    params.require(:url).merge(
+  def url_params
+    params.require(:url).permit().merge(
       original_url: format(params[:url][:original_url])
     )
   end
