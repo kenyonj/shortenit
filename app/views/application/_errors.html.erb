@@ -1,10 +1,25 @@
 <% if target.errors.any? %>
-  <div class="error-messages">
-    Could not save for the following reasons:
-    <ul>
+  <div class="overlay" id="overlay" style="display:none;"></div>
+  <div class="box" id="box">
+    <a class="boxclose" id="boxclose"></a>
+    <h1>ERRORS</h1>
+    <div id='error-list'>
       <% target.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <div class='error-item'><%= message %></div>
       <% end %>
-    </ul>
+    </div>
   </div>
+  <script>
+  $(document).ready(function() {
+    $('#overlay').fadeIn(200,function(){
+      $('#box').animate({'top':'150px'},300);
+    });
+
+    $('#boxclose').click(function(){
+      $('#box').animate({'top':'-200px'},500,function(){
+        $('#overlay').fadeOut('fast');
+      });
+    });
+  });
+  </script>
 <% end %>

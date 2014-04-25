@@ -16,7 +16,7 @@ class UrlFormatter
   private
 
   def missing_protocol?
-    missing_http? && missing_https?
+    (missing_http? && missing_https?) && missing_ftp?
   end
 
   def missing_http?
@@ -25,5 +25,9 @@ class UrlFormatter
 
   def missing_https?
     !url.starts_with?("https://")
+  end
+
+  def missing_ftp?
+    !url.starts_with?("ftp://")
   end
 end
