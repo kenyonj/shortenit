@@ -138,8 +138,6 @@ GEM
     unicorn-rails (2.0.0)
       rack
       unicorn
-    zeroclipboard-rails (0.0.12)
-      railties (>= 3.1)
 
 PLATFORMS
   ruby
@@ -162,4 +160,3 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   unicorn-rails
-  zeroclipboard-rails

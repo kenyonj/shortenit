@@ -8,10 +8,20 @@
       <%= redirect_url(@url.token) %>
     </a>
     <a href='#' data-clipboard-text='<%= redirect_url(@url.token) %>' id='clip-button'>
-      <%= image_tag('copyicon.png') %>
+      <%= image_tag('copyicon.png') %><span id='copied-status'></span>
     </a>
   </div>
 </div>
 <script>
-  var client = new ZeroClipboard( $('#clip-button') );
+  $(document).ready(function() {
+    ZeroClipboard.config({
+      moviePath: '<%= asset_path('ZeroClipboard.swf') %>',
+      forceHandCursor: true,
+      debug: true
+    });
+    var client = new ZeroClipboard($('#clip-button'));
+    client.on( 'copy', function ( event ) {
+      $('#copied-status').text('Copied!');
+    } );
+  });
 </script>

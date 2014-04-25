@@ -11,7 +11,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bourbon'
 gem 'neat'
-gem 'zeroclipboard-rails'
 gem 'unicorn-rails'
 
 group :doc do

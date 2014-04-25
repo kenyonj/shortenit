@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require zeroclipboard
-//= require jquery.tipsy
+//= require ZeroClipboard
 //= require turbolinks
 //= require_tree .
