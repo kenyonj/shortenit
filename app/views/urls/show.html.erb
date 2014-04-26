@@ -8,7 +8,7 @@
       <%= redirect_url(@url.token) %>
     </a>
     <a href='#' data-clipboard-text='<%= redirect_url(@url.token) %>' id='clip-button'>
-      <%= image_tag('copyicon.png') %><span id='copied-status'></span>
+      <%= image_tag('copy.png') %>
     </a>
   </div>
 </div>
@@ -20,8 +20,12 @@
       debug: true
     });
     var client = new ZeroClipboard($('#clip-button'));
-    client.on( 'copy', function ( event ) {
-      $('#copied-status').text('Copied!');
-    } );
+    client.on('load', function(client) {
+      client.on('complete', function(client, args) {
+        this.innerHTML = '<%= image_tag('thumb_up.png') %>';
+        this.blur();
+        $('#clip-button').contents().unwrap();
+      });
+    });
   });
 </script>
