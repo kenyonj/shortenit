@@ -1,5 +1,6 @@
 class UrlsController < ApplicationController
   respond_to :html
+  before_action :count_urls, only: [:new, :show]
 
   def new
     @url = Url.new
@@ -28,5 +29,9 @@ class UrlsController < ApplicationController
 
   def format(url)
     UrlFormatter.new(url).formatted_url
+  end
+
+  def count_urls
+    @url_count = Url.all.count
   end
 end
