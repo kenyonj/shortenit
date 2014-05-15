@@ -15,7 +15,9 @@
 <script>
   $(document).ready(function() {
     ZeroClipboard.config({
-      moviePath: '<%= asset_path('ZeroClipboard.swf') %>',
+      moviePath: "//d2glos6gx2bw40.cloudfront.net/C8QpR9/images/flash/ZeroClipboard.swf",
+      trustedDomains: ['*'],
+      allowScriptAccess: "always"
       forceHandCursor: true,
       debug: true
     });
