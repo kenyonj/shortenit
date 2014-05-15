@@ -69,6 +69,21 @@ $tertiary-color: #656D78;
         outline: none;
       }
 
+      .form-item label {
+        display: inline;
+        color: $main-color;
+        font-family: 'Oswald', 'sans-serif';
+        position: relative;
+      }
+
+      .form-item input[type="checkbox"] {
+        display: inline;
+        color: $main-color;
+        font-family: 'Oswald', 'sans-serif';
+        position: relative;
+        top: 16px;
+      }
+
       .button {
         background: $tertiary-color;
         border: none;
