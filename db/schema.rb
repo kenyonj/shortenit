@@ -11,17 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140515022259) do
+ActiveRecord::Schema.define(version: 20141002212917) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "urls", force: true do |t|
-    t.string   "original_url",                 null: false
-    t.string   "token",                        null: false
+    t.string   "original_url", null: false
+    t.string   "token",        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "blurred",      default: false
   end
 
 end
