@@ -1,3 +1,6 @@
+[![Code Climate](https://codeclimate.com/github/kenyonj/shortenit/badges/gpa.svg)](https://codeclimate.com/github/kenyonj/shortenit)
+[![Circle CI](https://circleci.com/gh/kenyonj/shortenit/tree/master.svg?style=svg)](https://circleci.com/gh/kenyonj/shortenit/tree/master)
+
 ##URL Shortener
 This is a super simple URL shortener. All you have to do is paste in your long
 URL, press "SHORTEN" and you will be redirected to a page with the long URL
