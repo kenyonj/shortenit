@@ -1,5 +1,5 @@
 class Url < ActiveRecord::Base
-  before_create :generate_unique_token
+  before_create :generate_unique_token, unless: token
 
   validates :original_url, presence: true, url: true
 
