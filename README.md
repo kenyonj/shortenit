@@ -1,4 +1,5 @@
 [![Code Climate](https://codeclimate.com/github/kenyonj/shortenit/badges/gpa.svg)](https://codeclimate.com/github/kenyonj/shortenit)
+[![Test Coverage](https://codeclimate.com/github/kenyonj/shortenit/badges/coverage.svg)](https://codeclimate.com/github/kenyonj/shortenit)
 [![Circle CI](https://circleci.com/gh/kenyonj/shortenit/tree/master.svg?style=svg)](https://circleci.com/gh/kenyonj/shortenit/tree/master)
 
 ##URL Shortener
