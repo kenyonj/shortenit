@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'bourbon'
 gem 'neat'
 gem 'unicorn-rails'
+gem 'seed_dump'
 
 group :development do
   gem 'pry'
