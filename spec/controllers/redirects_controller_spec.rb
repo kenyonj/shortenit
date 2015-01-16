@@ -33,7 +33,7 @@ describe UrlsController do
   context "#show" do
     it "renders the show view" do
       url = create(:url)
-      allow(controller).to receive(:find_url).and_return(url)
+      allow(Url).to receive(:find_by).and_return(url)
 
       get :show, id: url.token
 
