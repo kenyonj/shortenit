@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe UrlFormatter do
   context ".initialize" do
-    it "escapes and removes whitespace the url and sets the instance variable" do
+    it "escapes/removes whitespace the url and sets the instance variable" do
       unformatted_url = "     example.com/?a=\11\15      "
       formatter = UrlFormatter.new(unformatted_url)
 
