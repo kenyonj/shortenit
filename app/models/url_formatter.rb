@@ -1,19 +1,19 @@
 class UrlFormatter
-  attr_reader :url
-
   def initialize(url)
-    @url = URI.escape(url.strip)
+    @url = URI.escape(url.gsub(" ", ""))
   end
 
   def formatted_url
     if missing_protocol?
       url.prepend("http://")
+    else
+      url
     end
-
-    url
   end
 
   private
+
+  attr_reader :url
 
   def missing_protocol?
     (missing_http? && missing_https?) && missing_ftp?
