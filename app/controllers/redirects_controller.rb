@@ -1,6 +1,7 @@
 class RedirectsController < ApplicationController
   def show
     url = find_url
+    url.add_hit
     redirect_to url.original_url
   end
 

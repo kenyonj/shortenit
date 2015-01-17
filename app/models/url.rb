@@ -7,6 +7,10 @@ class Url < ActiveRecord::Base
     token
   end
 
+  def add_hit
+    update(hit_count: hit_count + 1)
+  end
+
   private
 
   def generate_unique_token

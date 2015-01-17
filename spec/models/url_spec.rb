@@ -11,6 +11,16 @@ describe Url do
     end
   end
 
+  context "#add_hit" do
+    it "adds 1 to the hit_count" do
+      url = create(:url, hit_count: 5)
+
+      url.add_hit
+
+      expect(url.hit_count).to eq 6
+    end
+  end
+
   context "before_create :generate_unique_token" do
     it "generates a token that does not exist" do
       existing_url = create(:url)
