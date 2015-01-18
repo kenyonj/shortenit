@@ -3,6 +3,10 @@ class Url < ActiveRecord::Base
 
   validates :original_url, presence: true, url: true
 
+  def self.top_five
+    order("hit_count DESC").limit(5)
+  end
+
   def to_param
     token
   end

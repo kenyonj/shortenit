@@ -1,19 +1,36 @@
-<%= render 'errors', target: @url %>
+<%= render "errors", target: @url %>
 
-<div id='new-form-wrapper'>
-  <div id='new-url-form'>
+<div id="new-form-wrapper">
+  <div id="new-url-form">
     <%= form_for @url do |form| %>
-      <div class='form-item'>
+      <div class="form-item">
         <%= form.text_field :original_url,
           size: 70,
-          placeholder: 'Please enter your long url.' %>
+          placeholder: "Please enter your long url." %>
       </div>
-      <div class='button-panel'>
-        <%= form.submit 'shorten', class: 'button' %>
+      <div class="button-panel">
+        <%= form.submit "shorten", class: "button" %>
+      </div>
+      <div>
+        <table class="table-minimal">
+          <thead>
+            <tr>
+              <th>Long URL</th>
+              <th>Short Token</th>
+              <th>Hits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @urls.top_five.each do |url| %>
+              <tr>
+                <td><%= url.original_url %></td>
+                <td><%= link_to url.token, url_path(url.token) %></td>
+                <td><%= url.hit_count %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
       </div>
     <% end %>
-  </div>
-
-  <div id='deletion-disclaimer'>
   </div>
 </div>
