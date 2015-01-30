@@ -9,6 +9,8 @@ gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
+gem 'bourbon'
+gem 'neat'
 gem 'unicorn-rails'
 gem 'seed_dump'
 gem 'therubyracer', platforms: :ruby

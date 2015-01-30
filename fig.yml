@@ -6,6 +6,7 @@ db:
 web:
   build: .
   command: bundle exec rackup -p 3000
+  dns: 8.8.8.8
   volumes:
     - .:/myapp
   ports:
