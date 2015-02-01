@@ -3,10 +3,17 @@ db:
   ports:
     - "5432"
 
+test:
+  build: .
+  links:
+    - db
+  command: bundle exec rspec
+  environment:
+    - CODECLIMATE_REPO_TOKEN=df81fe642271008ad22fd0be1250803d837ddbf9b38bc468cbabba94dd56063d
+
 web:
   build: .
   command: bundle exec rackup -p 3000
-  dns: 8.8.8.8
   volumes:
     - .:/myapp
   ports:
