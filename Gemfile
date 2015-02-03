@@ -12,11 +12,9 @@ gem 'jbuilder', '~> 1.2'
 gem 'bourbon'
 gem 'neat'
 gem 'unicorn-rails'
-gem 'seed_dump'
 gem 'therubyracer', platforms: :ruby
 
 group :development do
-  gem 'pry'
   gem 'dotenv-rails'
 end
 
@@ -26,4 +24,8 @@ group :test do
   gem 'database_cleaner'
   gem 'shoulda'
   gem 'codeclimate-test-reporter', require: false
+end
+
+group :development, :test do
+  gem 'pry'
 end
