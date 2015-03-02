@@ -23,7 +23,7 @@ describe UrlsController do
 
     context "with invalid params" do
       it "renders the new view" do
-        post :create, url: { original_url: "abc:123;" }
+        post :create, url: { original_url: "" }
 
         expect(response).to render_template(:new)
       end
